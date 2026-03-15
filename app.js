@@ -79,6 +79,30 @@ const PLUGINS = [
     },
   },
   {
+    id: 'js-cloudimage-video-hotspot',
+    name: 'Video Hotspot',
+    version: '1.0.0',
+    tagline: 'Interactive hotspots on video content',
+    description:
+      'Add clickable hotspot markers to any video with time-based triggers, tooltips, pause-on-hover, and responsive positioning.',
+    icon: 'icon-video-hotspot',
+    accentColor: '#ff6b6b',
+    features: [
+      'Time-based Hotspots',
+      'Rich Tooltips',
+      'Pause on Hover',
+      'Responsive',
+      'Custom Markers',
+      'Animations',
+      'Touch Support',
+      'Accessibility',
+    ],
+    links: {
+      demo: 'https://scaleflex.github.io/js-cloudimage-video-hotspot/',
+      repo: 'https://github.com/scaleflex/js-cloudimage-video-hotspot',
+    },
+  },
+  {
     id: 'js-cloudimage-before-after',
     name: 'Before / After',
     version: '1.0.0',
@@ -186,6 +210,48 @@ function getPluginIllustration(pluginId) {
         <line x1="50" y1="55" x2="75" y2="100" stroke="url(#grad-hotspot)" stroke-width="1" opacity="0.1" stroke-dasharray="3 3"/>
         <line x1="120" y1="45" x2="150" y2="85" stroke="url(#grad-hotspot)" stroke-width="1" opacity="0.1" stroke-dasharray="3 3"/>
         <defs><linearGradient id="grad-hotspot" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#2c99ff"/><stop offset="1" stop-color="#00d4aa"/></linearGradient></defs>
+      </svg>`,
+
+    'js-cloudimage-video-hotspot': `
+      <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Video hotspot illustration">
+        <!-- Video frame -->
+        <rect x="15" y="15" width="170" height="130" rx="8" stroke="url(#grad-vidhotspot)" stroke-width="2" opacity="0.3"/>
+        <rect x="23" y="23" width="154" height="114" rx="4" stroke="url(#grad-vidhotspot)" stroke-width="1" opacity="0.12"/>
+        <!-- Play button -->
+        <circle cx="100" cy="80" r="22" fill="url(#grad-vidhotspot)" opacity="0.1" stroke="url(#grad-vidhotspot)" stroke-width="1.5" stroke-opacity="0.3"/>
+        <polygon points="93,68 93,92 113,80" fill="url(#grad-vidhotspot)" opacity="0.4"/>
+        <!-- Timeline bar -->
+        <rect x="30" y="125" width="140" height="4" rx="2" fill="url(#grad-vidhotspot)" opacity="0.1"/>
+        <rect x="30" y="125" width="80" height="4" rx="2" fill="url(#grad-vidhotspot)" opacity="0.3"/>
+        <circle cx="110" cy="127" r="5" fill="url(#grad-vidhotspot)" opacity="0.6"/>
+        <!-- Hotspot markers on video -->
+        <circle cx="55" cy="55" r="10" stroke="url(#grad-vidhotspot)" stroke-width="1" opacity="0.15">
+          <animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.15;0.05;0.15" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="55" cy="55" r="6" fill="url(#grad-vidhotspot)" opacity="0.6"/>
+        <circle cx="55" cy="55" r="2.5" fill="#fff" opacity="0.9"/>
+        <circle cx="145" cy="60" r="10" stroke="url(#grad-vidhotspot)" stroke-width="1" opacity="0.15">
+          <animate attributeName="r" values="10;15;10" dur="3s" begin="0.7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.15;0.05;0.15" dur="3s" begin="0.7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="145" cy="60" r="6" fill="url(#grad-vidhotspot)" opacity="0.6"/>
+        <circle cx="145" cy="60" r="2.5" fill="#fff" opacity="0.9"/>
+        <circle cx="80" cy="100" r="10" stroke="url(#grad-vidhotspot)" stroke-width="1" opacity="0.15">
+          <animate attributeName="r" values="10;15;10" dur="3s" begin="1.4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.15;0.05;0.15" dur="3s" begin="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="80" cy="100" r="6" fill="url(#grad-vidhotspot)" opacity="0.6"/>
+        <circle cx="80" cy="100" r="2.5" fill="#fff" opacity="0.9"/>
+        <!-- Tooltip -->
+        <rect x="118" y="35" width="50" height="18" rx="4" fill="url(#grad-vidhotspot)" opacity="0.1" stroke="url(#grad-vidhotspot)" stroke-width="1" stroke-opacity="0.25"/>
+        <line x1="125" y1="42" x2="155" y2="42" stroke="url(#grad-vidhotspot)" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
+        <line x1="125" y1="48" x2="145" y2="48" stroke="url(#grad-vidhotspot)" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+        <!-- Timeline hotspot markers -->
+        <circle cx="50" cy="127" r="3" fill="url(#grad-vidhotspot)" opacity="0.5"/>
+        <circle cx="90" cy="127" r="3" fill="url(#grad-vidhotspot)" opacity="0.5"/>
+        <circle cx="140" cy="127" r="3" fill="url(#grad-vidhotspot)" opacity="0.5"/>
+        <defs><linearGradient id="grad-vidhotspot" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#ff6b6b"/><stop offset="1" stop-color="#e05cff"/></linearGradient></defs>
       </svg>`,
 
     'js-cloudimage-before-after': `
@@ -320,6 +386,14 @@ function initScrollAnimations() {
     return;
   }
 
+  // Group elements by their parent section for per-group stagger
+  const sections = new Map();
+  document.querySelectorAll('.fade-in-up').forEach((el) => {
+    const parent = el.closest('section, footer') || document.body;
+    if (!sections.has(parent)) sections.set(parent, []);
+    sections.get(parent).push(el);
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -332,9 +406,25 @@ function initScrollAnimations() {
     { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
   );
 
-  document.querySelectorAll('.fade-in-up').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 80}ms`;
-    observer.observe(el);
+  sections.forEach((elements) => {
+    elements.forEach((el, i) => {
+      el.style.transitionDelay = `${i * 150}ms`;
+      observer.observe(el);
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   Hero Scroll Indicator Click
+   -------------------------------------------------------------------------- */
+function initHeroScrollClick() {
+  const scrollIndicator = document.querySelector('.hero__scroll');
+  const nextSection = document.querySelector('.hero + .section-divider + section') ||
+                      document.querySelector('.hero + section');
+  if (!scrollIndicator || !nextSection) return;
+
+  scrollIndicator.addEventListener('click', () => {
+    nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 }
 
@@ -357,12 +447,54 @@ function initSmoothScroll() {
 }
 
 /* --------------------------------------------------------------------------
+   Hero Mouse-Follow Gradient
+   -------------------------------------------------------------------------- */
+function initHeroMouseGradient() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const hero = document.querySelector('.hero');
+  const overlay = document.querySelector('.hero__mouse-gradient');
+  if (!hero || !overlay) return;
+
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    overlay.style.background = `radial-gradient(circle 400px at ${x}% ${y}%, rgba(44, 153, 255, 0.08), transparent 70%)`;
+    overlay.classList.add('hero__mouse-gradient--active');
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    overlay.classList.remove('hero__mouse-gradient--active');
+  });
+}
+
+/* --------------------------------------------------------------------------
+   Button Ripple Position Tracking
+   -------------------------------------------------------------------------- */
+function initButtonRipple() {
+  document.querySelectorAll('.btn--primary').forEach((btn) => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      btn.style.setProperty('--ripple-x', `${x}%`);
+      btn.style.setProperty('--ripple-y', `${y}%`);
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
    Init
    -------------------------------------------------------------------------- */
 function init() {
   renderPlugins();
   initNavScroll();
+  initHeroScrollClick();
   initSmoothScroll();
+  initHeroMouseGradient();
+  initButtonRipple();
 
   // Delay scroll animations slightly so cards are in the DOM
   requestAnimationFrame(() => {

@@ -8,7 +8,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Cloudimage Plugins">
-  <meta property="og:description" content="Open-source JavaScript plugins for interactive image experiences on the modern web.">
+  <meta property="og:description" content="Open-source JavaScript plugins for interactive media experiences on the modern web.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://scaleflex.github.io/js-cloudimage-plugins/">
 
@@ -47,6 +47,14 @@
       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
       <circle cx="12" cy="9" r="2.5"/>
       <circle cx="12" cy="9" r="5" opacity="0.3"/>
+    </symbol>
+
+    <!-- Video Hotspot icon -->
+    <symbol id="icon-video-hotspot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="14" rx="2"/>
+      <polygon points="10 8 10 14 15 11" fill="currentColor" stroke="none"/>
+      <circle cx="18" cy="7" r="3" fill="currentColor" stroke="none" opacity="0.8"/>
+      <circle cx="18" cy="7" r="5" opacity="0.3"/>
     </symbol>
 
     <!-- Before/After comparison icon -->
@@ -157,18 +165,33 @@
        Hero
        ==================================================================== -->
   <section class="hero" id="hero">
-    <div class="hero__gradient" aria-hidden="true"></div>
+    <div class="hero__gradient" aria-hidden="true">
+      <div class="hero__gradient-layer hero__gradient-layer--1"></div>
+      <div class="hero__gradient-layer hero__gradient-layer--2"></div>
+      <div class="hero__gradient-layer hero__gradient-layer--3"></div>
+    </div>
     <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__mouse-gradient" aria-hidden="true"></div>
+    <div class="hero__particles" aria-hidden="true">
+      <div class="hero__dot"></div>
+      <div class="hero__dot"></div>
+      <div class="hero__dot"></div>
+      <div class="hero__dot"></div>
+      <div class="hero__dot"></div>
+      <div class="hero__dot"></div>
+      <div class="hero__dot"></div>
+      <div class="hero__dot"></div>
+    </div>
 
     <div class="hero__content">
       <div class="hero__badge">Open Source</div>
 
       <h1 class="hero__title">
-        Cloudimage <span class="gradient-text">Plugins</span>
+        <span class="word">Cloudimage</span> <span class="gradient-text word" data-text="Plugins">Plugins</span>
       </h1>
 
       <p class="hero__subtitle">
-        Interactive image experiences for the modern web. Zero dependencies, fully accessible, and ready to drop into any project.
+        Interactive media experiences for the modern web. Zero dependencies, fully accessible, and ready to drop into any project.
       </p>
 
       <div class="hero__actions">
@@ -182,7 +205,7 @@
       </div>
 
       <div class="hero__stats">
-        <span class="hero__stat"><strong>3</strong> Plugins</span>
+        <span class="hero__stat"><strong>5</strong> Plugins</span>
         <span class="hero__stat"><strong>Zero</strong> Dependencies</span>
         <span class="hero__stat"><strong>WCAG 2.1</strong> AA</span>
       </div>
@@ -193,6 +216,8 @@
       <svg><use href="#icon-chevron-down"></use></svg>
     </div>
   </section>
+
+  <hr class="section-divider" aria-hidden="true">
 
   <!-- ====================================================================
        Plugins
@@ -206,6 +231,8 @@
       <div class="plugins-grid" id="plugins-grid"></div>
     </div>
   </section>
+
+  <hr class="section-divider" aria-hidden="true">
 
   <!-- ====================================================================
        Why Cloudimage Plugins?
@@ -275,26 +302,28 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__main">
-        <div class="footer__brand">
+        <div class="footer__brand fade-in-up">
           <img src="https://assets.scaleflex.com/Marketing/Logos/Scaleflex%20Logos/Logo%20Horizontal/scaleflex%20logo%20without%20tagline%20white%20text%20%28horizontal%29%20.png?vh=85bc00" alt="Scaleflex" class="footer__brand-logo">
-          <p>Open-source JavaScript plugins for interactive image experiences. Built with care by the Scaleflex team.</p>
+          <p>Open-source JavaScript plugins for interactive media experiences. Built with care by the Scaleflex team.</p>
         </div>
-        <div class="footer__col">
+        <div class="footer__col fade-in-up">
           <h4>Resources</h4>
           <ul>
             <li><a href="https://github.com/scaleflex" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://docs.cloudimage.io/" target="_blank" rel="noopener noreferrer">Documentation</a></li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col fade-in-up">
           <h4>Plugins</h4>
           <ul>
+            <li><a href="https://scaleflex.github.io/js-cloudimage-3d-view/" target="_blank" rel="noopener noreferrer">3D View</a></li>
             <li><a href="https://scaleflex.github.io/js-cloudimage-360-view/" target="_blank" rel="noopener noreferrer">360 View</a></li>
             <li><a href="https://scaleflex.github.io/js-cloudimage-hotspot/" target="_blank" rel="noopener noreferrer">Image Hotspot</a></li>
             <li><a href="https://scaleflex.github.io/js-cloudimage-before-after/" target="_blank" rel="noopener noreferrer">Before / After</a></li>
+            <li><a href="https://scaleflex.github.io/js-cloudimage-video-hotspot/" target="_blank" rel="noopener noreferrer">Video Hotspot</a></li>
           </ul>
         </div>
-        <div class="footer__col">
+        <div class="footer__col fade-in-up">
           <h4>Support</h4>
           <ul>
             <li><a href="https://github.com/scaleflex/js-cloudimage-plugins/issues" target="_blank" rel="noopener noreferrer">Report an Issue</a></li>
