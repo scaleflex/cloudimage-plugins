@@ -9,7 +9,8 @@ const PLUGINS = [
   {
     id: 'cloudimage-3d-view',
     name: '3D View',
-    version: '1.0.0',
+    npmPackage: '@cloudimage/3d-view',
+    version: '1.2.0',
     tagline: 'Interactive 3D product visualization',
     description:
       'Display 3D models with smooth rotation, zoom, autoplay, and fullscreen support. Touch-friendly with drag controls and inertia.',
@@ -33,7 +34,8 @@ const PLUGINS = [
   {
     id: 'cloudimage-360-view',
     name: '360 View',
-    version: '4.3.5',
+    npmPackage: '@cloudimage/360-view',
+    version: '4.9.5',
     tagline: 'Interactive 360-degree product views',
     description:
       'Smooth rotation with touch/drag inertia, pinch-to-zoom, autoplay, fullscreen, hotspots, and keyboard navigation.',
@@ -57,7 +59,8 @@ const PLUGINS = [
   {
     id: 'cloudimage-hotspot',
     name: 'Image Hotspot',
-    version: '1.0.0',
+    npmPackage: '@cloudimage/hotspot',
+    version: '1.1.11',
     tagline: 'Clickable hotspots on any image',
     description:
       'Add interactive hotspot markers with tooltips, custom icons, responsive positioning, and animated indicators.',
@@ -81,7 +84,8 @@ const PLUGINS = [
   {
     id: 'cloudimage-video-hotspot',
     name: 'Video Hotspot',
-    version: '1.0.0',
+    npmPackage: '@cloudimage/video-hotspot',
+    version: '1.1.2',
     tagline: 'Interactive hotspots on video content',
     description:
       'Add clickable hotspot markers to any video with time-based triggers, tooltips, pause-on-hover, and responsive positioning.',
@@ -105,7 +109,8 @@ const PLUGINS = [
   {
     id: 'cloudimage-before-after',
     name: 'Before / After',
-    version: '1.0.0',
+    npmPackage: '@cloudimage/before-after',
+    version: '1.0.3',
     tagline: 'Side-by-side image comparison slider',
     description:
       'A smooth comparison slider with touch support, vertical and horizontal modes, and customizable handle.',
@@ -317,7 +322,7 @@ function createPluginCard(plugin) {
         </div>
         <div class="plugin-card__title-group">
           <h3 class="plugin-card__name">${plugin.name}</h3>
-          <span class="plugin-card__version">${plugin.id}</span>
+          <span class="plugin-card__version">${plugin.npmPackage}</span>
         </div>
       </div>
       <p class="plugin-card__tagline">${plugin.tagline}</p>
