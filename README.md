@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.scaleflex.com">
-    <img src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/logo_scaleflex_on_white_bg.jpg?vh=91b12d&w=700" alt="Scaleflex" width="350">
+    <img src="https://scaleflex.cloudimg.io/v7/plugins/cloudimage-360-view/logo_scaleflex_on_white_bg.jpg?vh=91b12d&w=700" alt="Scaleflex" width="350">
   </a>
 </p>
 
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://scaleflex.github.io/js-cloudimage-plugins/">Live Hub</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.cloudimage.io">Cloudimage.io</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://docs.cloudimage.io/">Docs</a>
+  <a href="https://scaleflex.github.io/cloudimage-plugins/">Live Hub</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.cloudimage.io">Cloudimage.io</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://docs.cloudimage.io/">Docs</a>
 </p>
 
 ---
@@ -21,11 +21,11 @@
 
 | Plugin | Description | Links |
 |--------|-------------|-------|
-| **[360 View](https://github.com/scaleflex/js-cloudimage-360-view)** | Smooth 360-degree product rotation with touch/drag, pinch-to-zoom, autoplay, fullscreen, and hotspots. | [Demo](https://scaleflex.github.io/js-cloudimage-360-view/) |
-| **[3D View](https://github.com/scaleflex/js-cloudimage-3d-view)** | Interactive 3D product visualization with rotation, zoom, autoplay, and fullscreen support. | [Demo](https://scaleflex.github.io/js-cloudimage-3d-view/) |
-| **[Image Hotspot](https://github.com/scaleflex/js-cloudimage-hotspot)** | Clickable hotspot markers on images with tooltips, custom icons, and animated indicators. | [Demo](https://scaleflex.github.io/js-cloudimage-hotspot/) |
-| **[Video Hotspot](https://github.com/scaleflex/js-cloudimage-video-hotspot)** | Interactive hotspots on video with time-based triggers, tooltips, and pause-on-hover. | [Demo](https://scaleflex.github.io/js-cloudimage-video-hotspot/) |
-| **[Before / After](https://github.com/scaleflex/js-cloudimage-before-after)** | Side-by-side image comparison slider with touch support and horizontal/vertical modes. | [Demo](https://scaleflex.github.io/js-cloudimage-before-after/) |
+| **[360 View](https://github.com/scaleflex/cloudimage-360-view)** | Smooth 360-degree product rotation with touch/drag, pinch-to-zoom, autoplay, fullscreen, and hotspots. | [Demo](https://scaleflex.github.io/cloudimage-360-view/) |
+| **[3D View](https://github.com/scaleflex/cloudimage-3d-view)** | Interactive 3D product visualization with rotation, zoom, autoplay, and fullscreen support. | [Demo](https://scaleflex.github.io/cloudimage-3d-view/) |
+| **[Image Hotspot](https://github.com/scaleflex/cloudimage-hotspot)** | Clickable hotspot markers on images with tooltips, custom icons, and animated indicators. | [Demo](https://scaleflex.github.io/cloudimage-hotspot/) |
+| **[Video Hotspot](https://github.com/scaleflex/cloudimage-video-hotspot)** | Interactive hotspots on video with time-based triggers, tooltips, and pause-on-hover. | [Demo](https://scaleflex.github.io/cloudimage-video-hotspot/) |
+| **[Before / After](https://github.com/scaleflex/cloudimage-before-after)** | Side-by-side image comparison slider with touch support and horizontal/vertical modes. | [Demo](https://scaleflex.github.io/cloudimage-before-after/) |
 
 ## Why Cloudimage Plugins?
 
@@ -40,8 +40,8 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/scaleflex/js-cloudimage-plugins.git
-cd js-cloudimage-plugins
+git clone https://github.com/scaleflex/cloudimage-plugins.git
+cd cloudimage-plugins
 
 # Install and start
 yarn install

@@ -7,7 +7,7 @@
    -------------------------------------------------------------------------- */
 const PLUGINS = [
   {
-    id: 'js-cloudimage-3d-view',
+    id: 'cloudimage-3d-view',
     name: '3D View',
     version: '1.0.0',
     tagline: 'Interactive 3D product visualization',
@@ -26,12 +26,12 @@ const PLUGINS = [
       'Accessibility',
     ],
     links: {
-      demo: 'https://scaleflex.github.io/js-cloudimage-3d-view/',
-      repo: 'https://github.com/scaleflex/js-cloudimage-3d-view',
+      demo: 'https://scaleflex.github.io/cloudimage-3d-view/',
+      repo: 'https://github.com/scaleflex/cloudimage-3d-view',
     },
   },
   {
-    id: 'js-cloudimage-360-view',
+    id: 'cloudimage-360-view',
     name: '360 View',
     version: '4.3.5',
     tagline: 'Interactive 360-degree product views',
@@ -50,12 +50,12 @@ const PLUGINS = [
       'Lazy Loading',
     ],
     links: {
-      demo: 'https://scaleflex.github.io/js-cloudimage-360-view/',
-      repo: 'https://github.com/scaleflex/js-cloudimage-360-view',
+      demo: 'https://scaleflex.github.io/cloudimage-360-view/',
+      repo: 'https://github.com/scaleflex/cloudimage-360-view',
     },
   },
   {
-    id: 'js-cloudimage-hotspot',
+    id: 'cloudimage-hotspot',
     name: 'Image Hotspot',
     version: '1.0.0',
     tagline: 'Clickable hotspots on any image',
@@ -74,12 +74,12 @@ const PLUGINS = [
       'Accessibility',
     ],
     links: {
-      demo: 'https://scaleflex.github.io/js-cloudimage-hotspot/',
-      repo: 'https://github.com/scaleflex/js-cloudimage-hotspot',
+      demo: 'https://scaleflex.github.io/cloudimage-hotspot/',
+      repo: 'https://github.com/scaleflex/cloudimage-hotspot',
     },
   },
   {
-    id: 'js-cloudimage-video-hotspot',
+    id: 'cloudimage-video-hotspot',
     name: 'Video Hotspot',
     version: '1.0.0',
     tagline: 'Interactive hotspots on video content',
@@ -98,12 +98,12 @@ const PLUGINS = [
       'Accessibility',
     ],
     links: {
-      demo: 'https://scaleflex.github.io/js-cloudimage-video-hotspot/',
-      repo: 'https://github.com/scaleflex/js-cloudimage-video-hotspot',
+      demo: 'https://scaleflex.github.io/cloudimage-video-hotspot/',
+      repo: 'https://github.com/scaleflex/cloudimage-video-hotspot',
     },
   },
   {
-    id: 'js-cloudimage-before-after',
+    id: 'cloudimage-before-after',
     name: 'Before / After',
     version: '1.0.0',
     tagline: 'Side-by-side image comparison slider',
@@ -122,8 +122,8 @@ const PLUGINS = [
       'Accessibility',
     ],
     links: {
-      demo: 'https://scaleflex.github.io/js-cloudimage-before-after/',
-      repo: 'https://github.com/scaleflex/js-cloudimage-before-after',
+      demo: 'https://scaleflex.github.io/cloudimage-before-after/',
+      repo: 'https://github.com/scaleflex/cloudimage-before-after',
     },
   },
 ];
@@ -133,7 +133,7 @@ const PLUGINS = [
    -------------------------------------------------------------------------- */
 function getPluginIllustration(pluginId) {
   const illustrations = {
-    'js-cloudimage-3d-view': `
+    'cloudimage-3d-view': `
       <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3D product visualization illustration">
         <!-- 3D cube wireframe -->
         <polygon points="100,20 160,55 160,105 100,140 40,105 40,55" stroke="url(#grad-3d)" stroke-width="2" opacity="0.3" fill="none"/>
@@ -163,7 +163,7 @@ function getPluginIllustration(pluginId) {
         <defs><linearGradient id="grad-3d" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#e05cff"/><stop offset="1" stop-color="#2c99ff"/></linearGradient></defs>
       </svg>`,
 
-    'js-cloudimage-360-view': `
+    'cloudimage-360-view': `
       <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="360 degree rotation illustration">
         <circle cx="100" cy="80" r="70" stroke="url(#grad-360)" stroke-width="2" opacity="0.3"/>
         <circle cx="100" cy="80" r="50" stroke="url(#grad-360)" stroke-width="1.5" opacity="0.2"/>
@@ -175,7 +175,7 @@ function getPluginIllustration(pluginId) {
         <defs><linearGradient id="grad-360" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#2c99ff"/><stop offset="1" stop-color="#00d4aa"/></linearGradient></defs>
       </svg>`,
 
-    'js-cloudimage-hotspot': `
+    'cloudimage-hotspot': `
       <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Image hotspot illustration">
         <rect x="10" y="10" width="180" height="140" rx="8" stroke="url(#grad-hotspot)" stroke-width="2" opacity="0.3"/>
         <rect x="18" y="18" width="164" height="124" rx="4" stroke="url(#grad-hotspot)" stroke-width="1" opacity="0.12"/>
@@ -212,7 +212,7 @@ function getPluginIllustration(pluginId) {
         <defs><linearGradient id="grad-hotspot" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#2c99ff"/><stop offset="1" stop-color="#00d4aa"/></linearGradient></defs>
       </svg>`,
 
-    'js-cloudimage-video-hotspot': `
+    'cloudimage-video-hotspot': `
       <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Video hotspot illustration">
         <!-- Video frame -->
         <rect x="15" y="15" width="170" height="130" rx="8" stroke="url(#grad-vidhotspot)" stroke-width="2" opacity="0.3"/>
@@ -254,7 +254,7 @@ function getPluginIllustration(pluginId) {
         <defs><linearGradient id="grad-vidhotspot" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#ff6b6b"/><stop offset="1" stop-color="#e05cff"/></linearGradient></defs>
       </svg>`,
 
-    'js-cloudimage-before-after': `
+    'cloudimage-before-after': `
       <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Before and after comparison illustration">
         <rect x="10" y="10" width="180" height="140" rx="8" stroke="url(#grad-ba)" stroke-width="2" opacity="0.3"/>
         <rect x="18" y="18" width="164" height="124" rx="4" stroke="url(#grad-ba)" stroke-width="1" opacity="0.12"/>
