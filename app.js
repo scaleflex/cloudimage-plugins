@@ -156,6 +156,31 @@ const PLUGINS = [
       repo: 'https://github.com/scaleflex/cloudimage-carousel',
     },
   },
+  {
+    id: 'cloudimage-spotlight',
+    name: 'Spotlight',
+    npmPackage: '@cloudimage/spotlight',
+    version: '1.0.6',
+    tagline: 'Screenshot-based interactive experience player',
+    description:
+      'Guided product tours with scene navigation, zoom, highlight overlays, annotations, and deep linking.',
+    icon: 'icon-spotlight',
+    accentColor: '#7c5cff',
+    features: [
+      'Scene Navigation',
+      'Zoom',
+      'Highlight Overlay',
+      'Annotations',
+      'Deep Linking',
+      'Autoplay',
+      'React Support',
+      'Accessibility',
+    ],
+    links: {
+      demo: 'https://scaleflex.github.io/cloudimage-spotlight/',
+      repo: 'https://github.com/scaleflex/cloudimage-spotlight',
+    },
+  },
 ];
 
 /* --------------------------------------------------------------------------
@@ -347,6 +372,36 @@ function getPluginIllustration(pluginId) {
           <animate attributeName="opacity" values="0.15;0.03;0.15" dur="3s" repeatCount="indefinite"/>
         </circle>
         <defs><linearGradient id="grad-carousel" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#e05cff"/></linearGradient></defs>
+      </svg>`,
+
+    'cloudimage-spotlight': `
+      <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spotlight interactive experience illustration">
+        <!-- Screenshot frame -->
+        <rect x="15" y="10" width="170" height="110" rx="8" stroke="url(#grad-spotlight)" stroke-width="2" opacity="0.3"/>
+        <rect x="23" y="18" width="154" height="94" rx="4" stroke="url(#grad-spotlight)" stroke-width="1" opacity="0.12"/>
+        <!-- Dimmed overlay -->
+        <rect x="23" y="18" width="154" height="94" rx="4" fill="url(#grad-spotlight)" opacity="0.04"/>
+        <!-- Spotlight cut-out region -->
+        <rect x="55" y="35" width="90" height="55" rx="6" stroke="url(#grad-spotlight)" stroke-width="2" opacity="0.5" fill="url(#grad-spotlight)" fill-opacity="0.08"/>
+        <!-- Spotlight glow -->
+        <rect x="55" y="35" width="90" height="55" rx="6" stroke="url(#grad-spotlight)" stroke-width="1" opacity="0.15">
+          <animate attributeName="opacity" values="0.15;0.05;0.15" dur="3s" repeatCount="indefinite"/>
+        </rect>
+        <!-- Region badge -->
+        <circle cx="60" cy="40" r="8" fill="url(#grad-spotlight)" opacity="0.7"/>
+        <circle cx="60" cy="40" r="3" fill="#fff" opacity="0.9"/>
+        <!-- Annotation panel below -->
+        <rect x="30" y="126" width="140" height="28" rx="6" fill="url(#grad-spotlight)" opacity="0.06" stroke="url(#grad-spotlight)" stroke-width="1" stroke-opacity="0.2"/>
+        <line x1="42" y1="135" x2="95" y2="135" stroke="url(#grad-spotlight)" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+        <line x1="42" y1="143" x2="120" y2="143" stroke="url(#grad-spotlight)" stroke-width="1.5" opacity="0.15" stroke-linecap="round"/>
+        <!-- Scene dots -->
+        <circle cx="88" cy="118" r="3" fill="url(#grad-spotlight)" opacity="0.6"/>
+        <circle cx="100" cy="118" r="3" fill="url(#grad-spotlight)" opacity="0.2"/>
+        <circle cx="112" cy="118" r="3" fill="url(#grad-spotlight)" opacity="0.2"/>
+        <!-- Navigation arrow -->
+        <path d="M160 118 L166 118" stroke="url(#grad-spotlight)" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+        <path d="M163 115 L166 118 L163 121" stroke="url(#grad-spotlight)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+        <defs><linearGradient id="grad-spotlight" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#7c5cff"/><stop offset="1" stop-color="#2c99ff"/></linearGradient></defs>
       </svg>`,
   };
 
