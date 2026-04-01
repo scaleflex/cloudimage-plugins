@@ -131,6 +131,31 @@ const PLUGINS = [
       repo: 'https://github.com/scaleflex/cloudimage-before-after',
     },
   },
+  {
+    id: 'cloudimage-carousel',
+    name: 'Carousel',
+    npmPackage: '@cloudimage/carousel',
+    version: '2.0.0',
+    tagline: 'Responsive image carousel & gallery',
+    description:
+      'A lightweight carousel with touch swipe, zoom, autoplay, thumbnails, fullscreen, and React support.',
+    icon: 'icon-carousel',
+    accentColor: '#f59e0b',
+    features: [
+      'Touch & Swipe',
+      'Zoom',
+      'Autoplay',
+      'Thumbnails',
+      'Fullscreen',
+      'Responsive',
+      'React Support',
+      'Accessibility',
+    ],
+    links: {
+      demo: 'https://scaleflex.github.io/cloudimage-carousel/',
+      repo: 'https://github.com/scaleflex/cloudimage-carousel',
+    },
+  },
 ];
 
 /* --------------------------------------------------------------------------
@@ -293,6 +318,35 @@ function getPluginIllustration(pluginId) {
           <animate attributeName="opacity" values="0.15;0.03;0.15" dur="3s" repeatCount="indefinite"/>
         </circle>
         <defs><linearGradient id="grad-ba" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#2c99ff"/><stop offset="1" stop-color="#00d4aa"/></linearGradient></defs>
+      </svg>`,
+
+    'cloudimage-carousel': `
+      <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Image carousel illustration">
+        <!-- Center slide -->
+        <rect x="50" y="20" width="100" height="120" rx="8" stroke="url(#grad-carousel)" stroke-width="2" opacity="0.5" fill="url(#grad-carousel)" fill-opacity="0.06"/>
+        <!-- Left slide (behind) -->
+        <rect x="15" y="30" width="50" height="100" rx="6" stroke="url(#grad-carousel)" stroke-width="1.5" opacity="0.2" fill="url(#grad-carousel)" fill-opacity="0.03"/>
+        <!-- Right slide (behind) -->
+        <rect x="135" y="30" width="50" height="100" rx="6" stroke="url(#grad-carousel)" stroke-width="1.5" opacity="0.2" fill="url(#grad-carousel)" fill-opacity="0.03"/>
+        <!-- Image placeholder on center slide -->
+        <path d="M60 110 L80 85 L95 100 L115 75 L140 110 Z" fill="url(#grad-carousel)" opacity="0.12"/>
+        <circle cx="80" cy="50" r="8" fill="url(#grad-carousel)" opacity="0.1"/>
+        <!-- Left arrow -->
+        <path d="M30 80 L22 80" stroke="url(#grad-carousel)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+        <path d="M26 76 L22 80 L26 84" stroke="url(#grad-carousel)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+        <!-- Right arrow -->
+        <path d="M170 80 L178 80" stroke="url(#grad-carousel)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+        <path d="M174 76 L178 80 L174 84" stroke="url(#grad-carousel)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+        <!-- Dot indicators -->
+        <circle cx="88" cy="148" r="3" fill="url(#grad-carousel)" opacity="0.2"/>
+        <circle cx="100" cy="148" r="3.5" fill="url(#grad-carousel)" opacity="0.6"/>
+        <circle cx="112" cy="148" r="3" fill="url(#grad-carousel)" opacity="0.2"/>
+        <!-- Subtle pulse on active dot -->
+        <circle cx="100" cy="148" r="3.5" stroke="url(#grad-carousel)" stroke-width="1" opacity="0.15">
+          <animate attributeName="r" values="3.5;7;3.5" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.15;0.03;0.15" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <defs><linearGradient id="grad-carousel" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#e05cff"/></linearGradient></defs>
       </svg>`,
   };
 
