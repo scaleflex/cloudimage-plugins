@@ -26,6 +26,8 @@
 | **[Image Hotspot](https://github.com/scaleflex/cloudimage-hotspot)** | Clickable hotspot markers on images with tooltips, custom icons, and animated indicators. | [Demo](https://scaleflex.github.io/cloudimage-hotspot/) |
 | **[Video Hotspot](https://github.com/scaleflex/cloudimage-video-hotspot)** | Interactive hotspots on video with time-based triggers, tooltips, and pause-on-hover. | [Demo](https://scaleflex.github.io/cloudimage-video-hotspot/) |
 | **[Before / After](https://github.com/scaleflex/cloudimage-before-after)** | Side-by-side image comparison slider with touch support and horizontal/vertical modes. | [Demo](https://scaleflex.github.io/cloudimage-before-after/) |
+| **[Carousel](https://github.com/scaleflex/cloudimage-carousel)** | Responsive image carousel & gallery with touch swipe, zoom, autoplay, thumbnails, and fullscreen. | [Demo](https://scaleflex.github.io/cloudimage-carousel/) |
+| **[Spotlight](https://github.com/scaleflex/cloudimage-spotlight)** | Screenshot-based interactive experience player with scene navigation, zoom, highlight overlays, and annotations. | [Demo](https://scaleflex.github.io/cloudimage-spotlight/) |
 
 ## Why Cloudimage Plugins?
 
